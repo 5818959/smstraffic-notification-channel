@@ -9,12 +9,6 @@
             "email": "5818959@gmail.com"
         }
     ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/5818959/smstraffic-client"
-        }
-    ],
     "require": {
         "php": "^7.1.3",
         "illuminate/notifications": "~5.8.0|^6.0",

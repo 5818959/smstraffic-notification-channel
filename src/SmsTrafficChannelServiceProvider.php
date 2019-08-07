@@ -20,7 +20,8 @@ class SmsTrafficChannelServiceProvider extends ServiceProvider
                 return new Channels\SmsTrafficSmsChannel(
                     new SmsTrafficClient(
                         $this->app['config']['services.smstraffic.login'],
-                        $this->app['config']['services.smstraffic.password']
+                        $this->app['config']['services.smstraffic.password'],
+                        $this->app['config']['services.smstraffic.url']
                     ),
                     $this->app['config']['services.smstraffic.sms_from']
                 );
