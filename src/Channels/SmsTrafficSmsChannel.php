@@ -44,11 +44,15 @@ class SmsTrafficSmsChannel
      */
     public function send($notifiable, Notification $notification)
     {
-        if (! $to = $notifiable->routeNotificationFor('smstraffic', $notification)) {
+        $message = $notification->toSmsTraffic($notifiable);
+
+        $to = empty($message->to)
+              ? $notifiable->routeNotificationFor('smstraffic', $notification)
+              : $message->to;
+
+        if (empty($to)) {
             return;
         }
-
-        $message = $notification->toSmsTraffic($notifiable);
 
         if (is_string($message)) {
             $message = new SmsTrafficMessage($message);
