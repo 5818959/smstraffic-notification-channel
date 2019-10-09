@@ -31,6 +31,13 @@ For testing purposes you may want to change the URL that smstraffic-client makes
 ],
 ```
 
+## SmsTrafficMessage attributes
+
+`SmsTrafficMessage` has additional attributes:
+- `from` attribute allows you to override the `sms_from` configuration option;
+- `to` attribute allows you to override the recipient phone number;
+- `type` attribute allows you to set the type of the message; this is useful if you plan to distinguish between messages in your app later.
+
 ## License
 
 Laravel SmsTraffic Notification Channel is open-sourced software licensed under the [MIT license](LICENSE.md).
