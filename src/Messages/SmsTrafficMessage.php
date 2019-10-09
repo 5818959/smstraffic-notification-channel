@@ -26,6 +26,13 @@ class SmsTrafficMessage
     public $to;
 
     /**
+     * The type of the message.
+     *
+     * @var string
+     */
+    public $type;
+
+    /**
      * Create a new message instance.
      *
      * @param  string  $content
@@ -71,6 +78,19 @@ class SmsTrafficMessage
     public function to($to)
     {
         $this->to = $to;
+
+        return $this;
+    }
+
+    /**
+     * Set the type of the message.
+     *
+     * @param  string  $type
+     * @return $this
+     */
+    public function type($type)
+    {
+        $this->type = $type;
 
         return $this;
     }
